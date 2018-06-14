@@ -1,0 +1,28 @@
+<ion-content>
+
+  <div *ngIf="picture">
+    <img [src]="picture">
+    <ion-fab bottom center>
+      <button ion-fab (click)="startCamera()">
+        <ion-icon name="arrow-dropleft"></ion-icon>
+      </button>
+    </ion-fab>
+  </div>
+
+  <div *ngIf="!picture">
+
+    <ion-fab bottom center>
+      <button ion-fab (click)="takePicture()">
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    </ion-fab>
+
+    <ion-fab bottom right>
+      <button ion-fab (click)="switchCamera()">
+        <ion-icon name="reverse-camera"></ion-icon>
+      </button>
+    </ion-fab>
+
+  </div>
+
+</ion-content>
